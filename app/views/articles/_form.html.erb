@@ -1,7 +1,3 @@
-<h1>Create a New Article</h1>
-<%= render 'form' %>
-
-<% if false %>
 <% if @article.errors.any? %>
     <h2> Following errors</h2>
     <ul>
@@ -10,7 +6,7 @@
         <% end %>
     </ul>
 <% end %>
-<%= form_with scope: :article, url:articles_path, local: true do |f| %>
+<%= form_with(model:@article, local: true) do |f| %>
     <p> 
         <%= f.label :title %><br/>
         <%= f.text_field :title %>
@@ -24,5 +20,3 @@
     </p>
     
     <% end %> 
-<% end %>
-    <%= link_to 'Return to list page', articles_path()%> 
