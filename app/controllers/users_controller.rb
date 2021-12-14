@@ -13,6 +13,10 @@ class UsersController < ApplicationController
     @articles =@user.articles
   end
 
+  def index
+    @users = User.all 
+      
+  end
   def create
     #byebug
     @user = User.new(user_params)
