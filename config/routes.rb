@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   resources :articles
   get 'signup', to: 'users#new'
   #post 'users', to: 'users#create'
-  resources :articles ,except: [:new] #new not needed since we have signup
+  resources :users ,except: [:new] #new not needed since we have signup
 end
